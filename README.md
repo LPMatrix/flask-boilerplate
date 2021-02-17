@@ -69,22 +69,29 @@ Includes preconfigured packages to kick start flask app by just setting appropri
 | [marshmallow](https://marshmallow.readthedocs.io/en/stable/) 	| A package for creating Schema, serialization, deserialization 	|
 | [webargs](https://webargs.readthedocs.io/) 	| A Python library for parsing and validating HTTP request objects 	|
 
-`autopep8` & `flake8` as `dev` packages for `linting and formatting`
+## app
+The app directory is the home of your application logic.
 
-# Test
-  Test if this app has been installed correctly and it is working via following curl commands (or use in Postman)
-- Check if the app is running via `status` API
-```shell
-$ curl --location --request GET 'http://localhost:5000/status'
-```
-- Check if core app API and celery task is working via
-```shell
-$ curl --location --request GET 'http://localhost:5000/api/v1/core/test'
-```
-- Check if authorization is working via (change `API Key` as per you `.env`)
-```shell
-$ curl --location --request GET 'http://localhost:5000/api/v1/core/restricted' --header 'x-api-key: 436236939443955C11494D448451F'
-```
+It’s autoloaded under the namespace App.
+
+## config
+The config directory is used to define the configuration of your application.
+
+It ships with a number of config files, but feel free to create your own.
+
+## database
+The database directory is used to store all database related files.
+
+## public
+The public directory is used to serve static assets over HTTP.
+
+This directory is mapped to the root of your website:
+
+## resources
+The resources directory is used to store presentational files for your application like view templates, LESS/SASS files, uncompiled JavaScript, or even images.
+
+## test
+The test directory is used to store all your application tests. The testing package is not included by default – you can install it following the instructions defined here.
 
 # License
  This program is free software under MIT license. Please see the [LICENSE](LICENSE) file in our repository for the full text.
